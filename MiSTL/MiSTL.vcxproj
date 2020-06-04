@@ -132,6 +132,8 @@
     <ClInclude Include="ListaCircular.hpp" />
     <ClInclude Include="Nodo.hpp" />
     <ClInclude Include="Pila.hpp" />
+    <ClInclude Include="searchAndSelectAlgorithms.hpp" />
+    <ClInclude Include="sortsAlgorithms.hpp" />
     <ClInclude Include="Tabla.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

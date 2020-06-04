@@ -41,5 +41,11 @@
     <ClInclude Include="HashTable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="searchAndSelectAlgorithms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sortsAlgorithms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
