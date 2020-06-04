@@ -144,7 +144,7 @@ void selectionSort(long long* arr, long long n)
     }
 }
 /*--------------------FIN SELECTION SORT--------------------------------------*/
-int main() {
+void prueba() {
     srand(time(0));
     long long * hola = new long long[arraySize];
     for (long long i = 0; i < arraySize; ++i) {
@@ -167,5 +167,4 @@ int main() {
             cout<<hola[j]<<" ";
         }
     }
-    return 0;
 }

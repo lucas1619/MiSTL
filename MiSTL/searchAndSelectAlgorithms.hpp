@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include<vector>
 using namespace std;
 //imprimible
 const long long arraySize = 10;
@@ -49,7 +50,25 @@ long long quickSelect(long long* arr, long long low, long long high, long long k
     return NULL;
 }
 /*--------------------FIN QUICK SELECT--------------------------------------*/
-int main() {
+/*-------------------------INICIO BINARY SEARCH----------------------------*/
+template <class T>
+void binarySearch(vector<T>*v, T search, short inicio, short final) {
+	T pivote = v->at((inicio + final) / 2);
+	cout << "inicio: " << inicio << endl << "final: " << final << endl;
+	if (pivote == search) {
+		cout << "encontrado" << endl;
+	}
+	if (pivote != search && (inicio + final) / 2 <= 1) {
+		cout << "no encontrado" << endl;
+	}
+	else if (pivote > search) {
+		binarySearch(v, search, inicio, (inicio + final) / 2);
+	}
+	else if (pivote < search) {
+		binarySearch(v, search, (inicio + final) / 2, final);
+	}
+}
+void prueba() {
     srand(time(0));
     long long *hola = new long long[arraySize];
     for (long long i = 0; i < arraySize; ++i) {
@@ -67,5 +86,4 @@ int main() {
     final = clock();
     float duracion = (float(final - inicio)/(CLOCKS_PER_SEC/1000));
     cout<<"Demoro el ordenamiento: "<<duracion<<endl;
-    return 0;
 }
